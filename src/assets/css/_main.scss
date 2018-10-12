@@ -1,0 +1,164 @@
+body {
+  max-width: 1280px;
+  margin: auto;
+  font-family: $mainFont;
+}
+
+// =============================------------------------- HEADER -------------------------=============================
+.mainHeader {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $space-m;
+}
+
+.mainHeader_inner {
+  display: flex;
+  margin-bottom: $space-m;
+  padding: $space-s;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid $thirdColor;
+
+  @media($desktop) {
+    padding: $space-m;
+  }
+}
+
+.mainHeader_logo {
+  width: 34px;
+}
+
+.mainHeader_title {
+  margin: 0;
+  font-size: 3.2rem;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.mainHeader_subtitle {
+  margin: 0;
+  padding-top: 20vh;
+  font-family: $secondaryFont;
+  font-size: 2.6rem;
+  font-weight: 100;
+  text-align: right;
+  background: url("../img/generated/html_code-1280px.jpg") center/cover no-repeat;//todo: replace this fallback with a working css plugin
+  background-image: image-set(
+                  url("../img/generated/html_code-400px.jpg") 1x,
+                  url("../img/generated/html_code-400px_2x.jpg") 2x,
+                  url("../img/generated/html_code-900px.jpg") 1x,
+                  url("../img/generated/html_code-900px_2x.jpg") 2x
+  );
+
+  @media($desktop) {
+    background: url("../img/generated/html_code-1280px.jpg") center/cover no-repeat;//todo: replace this fallback with a working css plugin
+    background-image: image-set(
+                    url("../img/generated/html_code-900px.jpg") 1x,
+                    url("../img/generated/html_code-900px_2x.jpg") 2x,
+                    url("../img/generated/html_code-1280px.jpg") 1x
+    );
+  }
+}
+
+.mainHeader_subtitle_wording {
+  display: block;
+  padding: $space-xs $space-s;
+  color: white;
+  background-color: $fog;
+}
+
+// =============================------------------------- MAIN CONTENT -------------------------=============================
+
+.container {
+  padding: 0 $space-s;
+
+  @media($desktop) {
+    padding: 0 $space-m;
+  }
+}
+
+.simpleText {
+  margin-bottom: $space-m;
+  font-size: 1.5rem;
+
+  @media($desktop) {
+    margin-bottom: $space-l;
+  }
+}
+
+.genericTitle {
+  margin-bottom: $space-m;
+  font-size: 3rem;
+  font-weight: 100;
+  color: $thirdColor;
+}
+
+// =============================------------------------- MAIN NAV -------------------------=============================
+
+.mainNav_list {
+  @media($desktop) {
+    display: flex;
+  }
+}
+
+.mainNav_list_element {
+  margin-bottom: $space-l;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media($desktop) {
+    flex: 1;
+    margin-right: $space-l;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+
+.mainNav_list_element_link_inner {
+  max-height: 30vh;
+  overflow: hidden;
+  transition: background-color .3s;
+}
+
+.mainNav_list_element_link_image {
+  position: relative;
+  z-index: -1;// bellow the black fog
+}
+
+.mainNav_list_element_link_wording {
+  @include accessible-invisibility;
+}
+
+.mainNav_list_element_link_title {
+  position: relative;
+  margin: 0;
+  font-size: 4.2rem;
+  font-weight: 100;
+  color: $primaryColor;
+  text-transform: uppercase;
+  text-align: center;
+  transition: margin-top .3s, padding-bottom .3s, color .3s;
+
+  @media($desktop) {
+    font-size: 3.8rem;
+  }
+}
+
+.mainNav_list_element_link:hover {
+  @media($desktop) {
+    .mainNav_list_element_link_title {
+
+      margin-top: calc(-100% / 3);
+      padding-bottom: calc(100% / 3);// so the place where the title was is still hoverable when it's gone
+      color: white;
+    }
+
+    .mainNav_list_element_link_inner {
+      background-color: $fog;
+    }
+  }
+}

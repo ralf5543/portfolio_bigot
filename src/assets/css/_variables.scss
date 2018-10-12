@@ -1,0 +1,16 @@
+/* ==================--------------- COLORS ---------------================== */
+$primaryColor: #2d3c49;// used for main text
+$secondaryColor: #02b3e4;// usd to highlight some elements
+$thirdColor: #7d97ad;// used for lighter texts
+$fog: rgba(0, 0, 0, .7);// overlays some blocks
+
+/* ==================--------------- WHITE SPACES ---------------================== */
+$space-xs: 4px;
+$space-s: 8px;
+$space-m: 16px;
+$space-l: 32px;
+$space-xl: 64px;
+
+/* ==================--------------- MEDIA QUERIES ---------------================== */
+$mobile: "max-width: 768px";
+$desktop: "min-width: 769px";

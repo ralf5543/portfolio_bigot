@@ -1,9 +1,5 @@
-body {
-  background: blue;
-  color: orange;
-}
-
-.toto {
-  color: red;
-  font-size: 15px;
-}
+@import "reboot";/* all reset and default style */
+@import "variables";/* sass (and eventually native) variables */
+@import "fonts";/* fonts :) */
+@import "mixins";/* usefull mixins */
+@import "main";/* the css for the website itself */

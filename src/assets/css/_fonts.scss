@@ -1,0 +1,23 @@
+$mainFont-font-face: 'roboto';//used for main text
+
+$mainFont: $mainFont-font-face, Arial, sans-serif;
+
+$secondaryFont: garamond, Times, serif;// mainly used for titles
+
+
+/* =================----------------- Roboto -----------------================= */
+
+// Roboto regular
+@font-face {
+  font-family: $mainFont-font-face;
+  src: url("../fonts/roboto/roboto-v18-latin-regular.woff") format("woff"),
+  url("../fonts/roboto/roboto-v18-latin-regular.woff2") format("woff2");
+}
+
+//Roboto bold
+@font-face {
+  font-family: $mainFont-font-face;
+  font-weight: bold;
+  src: url("../fonts/roboto/roboto-v18-latin-900.woff") format("woff"),
+  url("../fonts/roboto/roboto-v18-latin-900.woff2") format("woff2");
+}
